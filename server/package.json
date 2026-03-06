@@ -1,0 +1,23 @@
+{
+  "name": "@ancient/server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@ancient/shared": "*",
+    "colyseus": "^0.15.28",
+    "@colyseus/schema": "^2.0.35",
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "tsx": "^4.15.5",
+    "typescript": "^5.4.5",
+    "@types/node": "^20.14.0",
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17"
+  }
+}

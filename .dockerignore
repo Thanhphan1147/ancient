@@ -1,0 +1,12 @@
+**/node_modules
+**/dist
+**/dist-ssr
+**/.git
+**/.gitignore
+**/.vscode
+**/docs
+**/scripts
+**/*.log
+**/*.md
+**/.DS_Store
+**/*.tsbuildinfo

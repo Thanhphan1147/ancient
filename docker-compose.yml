@@ -1,0 +1,11 @@
+services:
+  ancient:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "2567:2567"
+    environment:
+      - PORT=2567
+      - NODE_ENV=production
+    restart: unless-stopped
