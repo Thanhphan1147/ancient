@@ -3,6 +3,7 @@ import { WebSocketTransport } from "@colyseus/ws-transport";
 import express from "express";
 import path from "path";
 import { createServer } from "http";
+import { LobbyRoom } from "./rooms/LobbyRoom";
 
 const app = express();
 const PORT = Number(process.env.PORT) || 2567;
@@ -24,8 +25,7 @@ const gameServer = new Server({
   transport: new WebSocketTransport({ server: httpServer }),
 });
 
-// Room definitions will be registered here in a later task, e.g.:
-// gameServer.define("battle", BattleRoom);
+gameServer.define("lobby", LobbyRoom);
 
 httpServer.listen(PORT, () => {
   console.log(`⚔️  Project Ancient server listening on http://0.0.0.0:${PORT}`);
